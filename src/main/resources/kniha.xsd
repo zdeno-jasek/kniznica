@@ -1,0 +1,27 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://llarik.sk/kniznica/soap"
+           targetNamespace="http://llarik.sk/kniznica/soap" elementFormDefault="qualified">
+    <xs:element name="GetKnihaRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:long" name="id"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetKnihaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="tns:KnihaSoapXml" name="kniha"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="KnihaSoapXml">
+        <xs:sequence>
+            <xs:element type="xs:long" name="id"/>
+            <xs:element type="xs:string" name="nazov"/>
+            <xs:element type="xs:string" name="autor"/>
+            <xs:element type="xs:int" name="celkovyPocet"/>
+            <xs:element type="xs:int" name="pocetDostupnychVytlackov"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

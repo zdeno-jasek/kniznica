@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gs="http://llarik.sk/kniznica/soap">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gs:GetKnihaRequest>
+            <gs:id>3</gs:id>
+        </gs:GetKnihaRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
